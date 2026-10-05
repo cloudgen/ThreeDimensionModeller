@@ -14,7 +14,7 @@ Version SSOT: `pyproject.toml` + `src/ThreeDimensionModeller/__init__.py` `__ver
 - `./convert.py` calls the same build.
 - Pip dependencies are `ChronicleLogger>=1.3.1`, `numpy>=2.3.0`, `opencv-python-headless>=5.0.0.93`, and `scikit-image>=0.25.0`.
 - Public source is `https://github.com/cloudgen/ThreeDimensionModeller`.
-- `screenshots/model-viewer.png` is a capture of `sample-images/model/viewer.html`. The picture in `README.md` links to that viewer. Picture addresses are absolute `https` URLs so the package index and GitHub both show them.
+- `screenshots/model-viewer.png` is a capture of `sample-images/model/viewer.html`. The picture in `README.md` links to `https://cloudgen.github.io/ThreeDimensionModeller/sample-images/model/viewer.html`. Picture addresses are absolute `https` URLs on `raw.githubusercontent.com` so the package index and GitHub both show them.
 
 ### Changed
 

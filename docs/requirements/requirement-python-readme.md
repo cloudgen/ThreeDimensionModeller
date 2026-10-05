@@ -1,5 +1,5 @@
 **file**: docs/requirements/requirement-python-readme.md
-**Status**: Active (Version 1.0.3)
+**Status**: Active (Version 1.0.4)
 **Area**: python
 **Key**: `requirement-python-readme`
 **Philosophy**: CIAO **v2.10.2** / CIAO-Lite (Caution • Intentional • Anti-fragile • Over-engineered / Over-protect)
@@ -102,7 +102,7 @@ The first-row sentence in the user document **MUST** name the current directory 
 | **Older pictures** | `join-*.png` still show a two-file join from the previous product. The pixels name VideoJoin |
 | **Every PNG** | `README.md` links each PNG under `screenshots/`. `video.png` is linked and is not a menu capture |
 | **Image URL** | `https://raw.githubusercontent.com/cloudgen/ThreeDimensionModeller/main/screenshots/<basename>`. The package index can fetch that file only after it is on that public branch |
-| **Viewer link** | `https://github.com/cloudgen/ThreeDimensionModeller/blob/main/sample-images/model/viewer.html`. `model-viewer.png` links to this address. The image destination stays the Image URL row |
+| **Viewer link** | `https://cloudgen.github.io/ThreeDimensionModeller/sample-images/model/viewer.html`. `model-viewer.png` links to this address. The image destination stays the Image URL row |
 
 **Title:** `ThreeDimensionModeller - A glTF model and an HTML viewer from outline images`.
 
@@ -260,6 +260,7 @@ The documented install is for this login. **This requirement:** the user documen
 | 2026-10-04 | Active 1.0.1 | About and self-management pictures match the new page. Other menu pictures still show **1.0.4**. Package string is **1.0.5** |
 | 2026-10-05 | Active 1.0.2 | Quick Installation names the five pip floors. Product version stays **1.0.0** |
 | 2026-10-05 | Active 1.0.3 | Public source is `cloudgen/ThreeDimensionModeller`. `model-viewer.png` is the converted viewer and links to `sample-images/model/viewer.html` with an absolute `https` address. Product version stays **1.0.0** |
+| 2026-10-05 | Active 1.0.4 | The viewer link is the GitHub Pages address that serves `sample-images/model/viewer.html`. The picture address stays on `raw.githubusercontent.com`. Product version stays **1.0.0** |
 
 ---
 

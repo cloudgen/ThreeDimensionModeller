@@ -8,7 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 README = (ROOT / "README.md").read_text(encoding="utf-8")
 IMAGE_BASE = "https://raw.githubusercontent.com/cloudgen/ThreeDimensionModeller/main/screenshots/"
-VIEWER_URL = "https://github.com/cloudgen/ThreeDimensionModeller/blob/main/sample-images/model/viewer.html"
+VIEWER_URL = "https://cloudgen.github.io/ThreeDimensionModeller/sample-images/model/viewer.html"
 RELATED = (
     "https://github.com/cloudgen/ThreeDimensionModeller",
     "https://pypi.org/project/ThreeDimensionModeller/",

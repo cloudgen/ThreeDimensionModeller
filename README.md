@@ -11,9 +11,9 @@ ThreeDimensionModeller builds one glTF model and one HTML viewer from outline im
 
 On a terminal, starting it with no arguments opens a text menu. The menu does not convert images by itself, and it does not call pip.
 
-The sample conversion is [`sample-images/model/viewer.html`](https://github.com/cloudgen/ThreeDimensionModeller/blob/main/sample-images/model/viewer.html). The picture is that page. The picture address is absolute, so the package index and GitHub both show it.
+The sample conversion is [`sample-images/model/viewer.html`](https://cloudgen.github.io/ThreeDimensionModeller/sample-images/model/viewer.html). The picture is that page. The picture address is absolute, so the package index and GitHub both show it.
 
-[![Converted model in the HTML viewer](https://raw.githubusercontent.com/cloudgen/ThreeDimensionModeller/main/screenshots/model-viewer.png)](https://github.com/cloudgen/ThreeDimensionModeller/blob/main/sample-images/model/viewer.html)
+[![Converted model in the HTML viewer](https://raw.githubusercontent.com/cloudgen/ThreeDimensionModeller/main/screenshots/model-viewer.png)](https://cloudgen.github.io/ThreeDimensionModeller/sample-images/model/viewer.html)
 
 ## Features
 
@@ -330,7 +330,7 @@ A still picture, not a text-menu capture. A woman with long brown hair, in a gre
 
 A capture of the converted model in `sample-images/model/viewer.html`. The page background is near black. The mesh is light gray and built from stacked outline slices: a wide upper mass, an opening through the middle, and a lower mass with a flat slab. The line at the bottom left reads "ThreeDimensionModeller — drag to orbit, wheel to zoom. model.glb is the glTF file." This is not a text-menu capture. The picture links to that viewer.
 
-[![Converted model in the HTML viewer](https://raw.githubusercontent.com/cloudgen/ThreeDimensionModeller/main/screenshots/model-viewer.png)](https://github.com/cloudgen/ThreeDimensionModeller/blob/main/sample-images/model/viewer.html)
+[![Converted model in the HTML viewer](https://raw.githubusercontent.com/cloudgen/ThreeDimensionModeller/main/screenshots/model-viewer.png)](https://cloudgen.github.io/ThreeDimensionModeller/sample-images/model/viewer.html)
 
 ## Examples
 
