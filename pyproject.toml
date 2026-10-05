@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ThreeDimensionModeller"
-version = "1.0.0"
+version = "1.0.1"
 description = "ThreeDimensionModeller builds a glTF model and an HTML viewer from outline images."
 readme = "README.md"
 requires-python = ">=3.10"

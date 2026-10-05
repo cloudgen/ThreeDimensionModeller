@@ -3,14 +3,14 @@
 Executable proof for product law. **Design map:** `docs/reviews/test-plan.md`.  
 **RTM:** `docs/reviews/requirement-test-matrix.md`.
 
-## Status (2026-10-05, product 1.0.0)
+## Status (2026-10-05, product 1.0.1)
 
 | Item | State |
 |------|--------|
 | Design TP map | **present** under `docs/reviews/test-plan.md` |
 | Automated suites | `tests/test_about.py` covers **TP-ABOUT-01** through **TP-ABOUT-14** and **TP-ABOUT-16** (have). There is no **TP-ABOUT-15**. `tests/test_tui.py` covers **TP-TUI-09** and **TP-TUI-10** (have). `tests/test_language.py` covers **TP-LANG-01** (have). `tests/test_docs.py` covers **TP-DOC-01** (have). **TP-DOC-03** stays `todo`. **TP-LOG-*** and **TP-OOP-*** stay `todo` |
 | Runner | `tests/run.sh` (`python3 -m unittest discover`) |
-| Last run | 2026-10-04 `./tests/run.sh` — 23 tests, OK |
+| Last run | 2026-10-05 `./tests/run.sh` — 37 tests, OK |
 
 ## Planned layout
 

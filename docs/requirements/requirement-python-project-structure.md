@@ -1,5 +1,5 @@
 **file**: docs/requirements/requirement-python-project-structure.md
-**Status**: Active (Version 1.1.2)
+**Status**: Active (Version 1.1.3)
 **Area**: python
 **Key**: `requirement-python-project-structure`
 **Philosophy**: CIAO **v2.10.2** / CIAO-Lite (Caution • Intentional • Anti-fragile • Over-engineered / Over-protect)
@@ -70,7 +70,7 @@ Define the repository layout and the package structure for ThreeDimensionModelle
 | Path | Role |
 |------|------|
 | `src/ThreeDimensionModeller/` | Installable package |
-| `src/ThreeDimensionModeller/__init__.py` | `__version__` (`1.0.0`) |
+| `src/ThreeDimensionModeller/__init__.py` | `__version__` (`1.0.1`) |
 | `src/ThreeDimensionModeller/__main__.py` | Module entry. Imports `main` from `cli` |
 | `src/ThreeDimensionModeller/cli.py` | Class `Cli` and `def main` |
 | `src/ThreeDimensionModeller/model.py` | Model functions. `./convert.py` calls `model.main` |
@@ -155,9 +155,10 @@ On Termux, Git Bash, Windows cmd, or the same class, the package is the normal u
 | 2026-10-04 | Active 1.1.0 | Running tree is three modules. Target modules are the OOP map. Deleted design-note paths are not listed as present. Changelog is root `CHANGELOG.md` |
 | 2026-10-04 | Active 1.1.1 | Sections, badges, and pictures in root `README.md` are `requirement-python-readme` |
 | 2026-10-04 | Active 1.1.2 | Allowed end state names `check_system.py`. `__version__` is **1.0.5** |
+| 2026-10-05 | Active 1.1.3 | `__version__` is **1.0.1** |
 
 ---
 
-**Last Updated**: 2026-10-04
+**Last Updated**: 2026-10-05
 **Owner**: project maintainers
 **Alignment**: Registry `docs/requirements/index.md`; **CIAO** (https://github.com/cloudgen/ciao); CIAO-Lite (https://github.com/cloudgen/ciao-lite).

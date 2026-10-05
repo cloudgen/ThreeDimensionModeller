@@ -1,5 +1,5 @@
 **file**: docs/requirements/requirement-python-cli-interface.md
-**Status**: Active (Version 1.1.3)
+**Status**: Active (Version 1.1.4)
 **Area**: python
 **Key**: `requirement-python-cli-interface`
 **Philosophy**: CIAO **v2.10.2** / CIAO-Lite (Caution • Intentional • Anti-fragile • Over-engineered / Over-protect)
@@ -150,7 +150,7 @@ Menu row 1 asks which folder. That question is `requirement-python-tui`. Esc the
 | **Quiet / JSON** | Text screen sets `is_quiet=True` on the logger construct. No `--json` |
 | **Privilege** | user-level only |
 | **Model** | `Cli._verb_model` calls `convert_folder`. It prints the waiting sentence and flushes, then prints only the remainder. It does not draw the menu |
-| **Product version** | `1.0.0` |
+| **Product version** | `1.0.1` |
 | **User docs** | Root `README.md` Usage matches this contract |
 
 ### 2.9 Why This Requirement Exists (CIAO)
@@ -240,6 +240,7 @@ On Termux, Git Bash, Windows cmd, or the same class, the person runs `three-dime
 | 2026-10-04 | Active 1.1.1 | `language` is not an argv verb. Menu row 4 owns it |
 | 2026-10-04 | Active 1.1.2 | Verb `about` is `requirement-python-about`. Rule 33 no longer claims a live ffmpeg probe. Product version **1.0.5** |
 | 2026-10-05 | Active 1.1.3 | `model` and `./convert.py` print the domain waiting sentence and flush before the work, then print only the remainder |
+| 2026-10-05 | Active 1.1.4 | Product version **1.0.1** |
 
 ---
 

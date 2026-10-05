@@ -1,5 +1,5 @@
 **file**: docs/requirements/requirement-python-coding-style.md
-**Status**: Active (Version 1.1.1)
+**Status**: Active (Version 1.1.2)
 **Area**: python
 **Key**: `requirement-python-coding-style`
 **Philosophy**: CIAO **v2.10.2** / CIAO-Lite (Caution • Intentional • Anti-fragile • Over-engineered / Over-protect)
@@ -89,7 +89,7 @@ Log the temp write, the publish, and the discard of an unfinished temp before th
 | **Gate checklist (cite ID)** | `CL-PYTHON-SHUTIL-MOVE-PUBLISH` — run when auditing promote and staging publish paths |
 | **Architecture** | Running tree is procedural. Allowed end state is the class map. StateLogic + `Attr` stays unordered |
 | **Logger** | Package import does not construct ChronicleLogger |
-| **Version** | `1.0.0` |
+| **Version** | `1.0.1` |
 | **User docs** | Root `README.md` Features must not claim a Cython-required runtime or a fixed `filelist.txt`-only strategy |
 
 ### 2.6 Why This Requirement Exists (CIAO)
@@ -170,9 +170,10 @@ On Termux, Git Bash, Windows cmd, or the same class, temps and the published fil
 | 2026-08-09 | Active 1.0.0 | Coding style, `shutil.move`, and multi-mount file I/O for ThreeDimensionModeller |
 | 2026-10-04 | Active 1.1.0 | Procedural `cli.py` is the running tree, not the allowed end state. The end state is `requirement-python-oop`. StateLogic stays unordered. Rules 7–15 are unchanged |
 | 2026-10-04 | Active 1.1.1 | Current version string is **1.0.5** |
+| 2026-10-05 | Active 1.1.2 | Current version string is **1.0.1** |
 
 ---
 
-**Last Updated**: 2026-10-04
+**Last Updated**: 2026-10-05
 **Owner**: project maintainers
 **Alignment**: Registry `docs/requirements/index.md`; **CIAO** (https://github.com/cloudgen/ciao); CIAO-Lite (https://github.com/cloudgen/ciao-lite).

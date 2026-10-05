@@ -2,7 +2,7 @@
 
 **Product:** ThreeDimensionModeller (Python CLI — text menu on a terminal; `model` builds a glTF model and an HTML viewer from outline images in a chosen folder, default `model.glb` and `viewer.html` in that folder's `model` directory; menu row 1 picks the current folder or a subfolder)
 **Workspace state:** Specialized product law (left genesis); **software-development** class; **pip/local package** install (not shell online Type O).
-**Product version:** **1.0.0** (align `pyproject.toml`, `__init__.__version__`, root `README.md` Version badge)
+**Product version:** **1.0.1** (align `pyproject.toml`, `__init__.__version__`, root `README.md` Version badge)
 **Updated:** 2026-10-05
 
 | ID / key | Title | Area | Status | Path | Updated |

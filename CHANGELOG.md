@@ -3,6 +3,13 @@
 All notable changes to **ThreeDimensionModeller** are documented here.  
 Version SSOT: `pyproject.toml` + `src/ThreeDimensionModeller/__init__.py` `__version__`.
 
+## [1.0.1] - 2026-10-05
+
+### Changed
+
+- Version is **1.0.1**. `pyproject.toml` and `__version__` match.
+- Menu pictures in `screenshots/` are captures of this version. The status line says `ThreeDimensionModeller 1.0.1`. The clock on those pictures is `20:26:52`. The about picture title is `ThreeDimensionModeller (1.0.1) — result`. The host check is stamped `2026-10-05 20:26:52.404013`.
+
 ## [1.0.0] - 2026-10-05
 
 ### Added

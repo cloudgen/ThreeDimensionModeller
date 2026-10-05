@@ -1,5 +1,5 @@
 **file**: docs/requirements/requirement-python-packaging.md
-**Status**: Active (Version 1.2.5)
+**Status**: Active (Version 1.2.6)
 **Area**: python
 **Key**: `requirement-python-packaging`
 **Philosophy**: CIAO **v2.10.2** / CIAO-Lite (Caution • Intentional • Anti-fragile • Over-engineered / Over-protect)
@@ -12,7 +12,7 @@ This file owns the manifest shape. The pip requirement strings are `requirement-
 
 ### 1.1 Human-facing
 
-**In one sentence:** ThreeDimensionModeller is a pip package named ThreeDimensionModeller, version 1.0.0. The status library and the image stack are required dependencies.
+**In one sentence:** ThreeDimensionModeller is a pip package named ThreeDimensionModeller, version 1.0.1. The status library and the image stack are required dependencies.
 
 | Box | Meaning | Example |
 |-----|---------|---------|
@@ -51,7 +51,7 @@ This file owns the manifest shape. The pip requirement strings are `requirement-
 
 5. The package version in `pyproject.toml` and `src/ThreeDimensionModeller/__init__.py` (`__version__`) **MUST** match when a release is claimed.
 6. Bumping either **MUST** update both in the same change.
-7. **MUST NOT** invent a third version constant. Display code **MUST NOT** keep a second literal, including a fallback `"1.0.0"` (`requirement-python-oop`). The current release string is `1.0.0`. A version bump is a user order, not a side effect of editing this file.
+7. **MUST NOT** invent a third version constant. Display code **MUST NOT** keep a second literal, including a fallback `"1.0.0"` (`requirement-python-oop`). The current release string is `1.0.1`. A version bump is a user order, not a side effect of editing this file.
 
 ### 2.3 Dependencies
 
@@ -78,7 +78,7 @@ This file owns the manifest shape. The pip requirement strings are `requirement-
 |------|--------|
 | **Manifest** | `pyproject.toml` |
 | **Project name** | `ThreeDimensionModeller` |
-| **Version** | `1.0.0` |
+| **Version** | `1.0.1` |
 | **requires-python** | `>=3.10` |
 | **Dependencies (law)** | The four strings in `requirement-python-dependency-management`: `ChronicleLogger>=1.3.1`, `numpy>=2.3.0`, `opencv-python-headless>=5.0.0.93`, `scikit-image>=0.25.0` |
 | **Dependencies (live manifest)** | The same four strings |
@@ -89,7 +89,7 @@ This file owns the manifest shape. The pip requirement strings are `requirement-
 | **License** | MIT |
 | **Public package exports** | `__version__`, `main` only. **MUST NOT** re-export `ChronicleLogger` |
 | **User docs** | Root `README.md` Quick Installation documents pip and **MUST NOT** claim pip installs FFmpeg |
-| **README version badge** | Must match packaging version when README claims complete (`1.0.0`) |
+| **README version badge** | Must match packaging version when README claims complete (`1.0.1`) |
 
 ### 2.7 Why This Requirement Exists (CIAO)
 
@@ -130,7 +130,7 @@ On Termux, Git Bash, Windows cmd, or the same class, install and upgrade use pip
 | AC-1 | `pyproject.toml` names ThreeDimensionModeller |
 | AC-2 | Console script `three-dimension-modeller` is declared |
 | AC-3 | Law and the live manifest both require `ChronicleLogger>=1.3.1` |
-| AC-4 | Version matches `__init__.py` when a release is claimed (`1.0.0`) |
+| AC-4 | Version matches `__init__.py` when a release is claimed (`1.0.1`) |
 | AC-5 | FFmpeg is not a pip dependency. The image strings match `requirement-python-dependency-management` |
 | AC-6 | Public exports are `__version__` and `main` only |
 
@@ -170,6 +170,7 @@ On Termux, Git Bash, Windows cmd, or the same class, install and upgrade use pip
 | 2026-10-05 | Active 1.2.3 | Product version **1.0.0**. Image stack is required. `requires-python` is `>=3.10` |
 | 2026-10-05 | Active 1.2.4 | Pip strings move to `requirement-python-dependency-management`. Each entry has a version floor. Product version stays **1.0.0** |
 | 2026-10-05 | Active 1.2.5 | Homepage, repository, and issues URLs are `https://github.com/cloudgen/ThreeDimensionModeller`. Product version stays **1.0.0** |
+| 2026-10-05 | Active 1.2.6 | Product version **1.0.1**. `pyproject.toml` and `__version__` match |
 
 ---
 

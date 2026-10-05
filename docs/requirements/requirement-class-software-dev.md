@@ -1,5 +1,5 @@
 **file**: docs/requirements/requirement-class-software-dev.md
-**Status**: Active (Version 1.1.4 – ThreeDimensionModeller software-development class law + residual stack)
+**Status**: Active (Version 1.1.5 – ThreeDimensionModeller software-development class law + residual stack)
 **Area**: class
 **Key**: `requirement-class-software-dev`
 **Philosophy**: CIAO **v2.10.2** / CIAO-Lite (Caution • Intentional • Anti-fragile • Over-engineered / Over-protect)
@@ -110,7 +110,7 @@ This file is class law plus the residual SSOT. It is not a second copy of the ou
 | **Architectures supported** | any architecture with CPython |
 | **Git surface** | used — remote `https://github.com/cloudgen/ThreeDimensionModeller` |
 | **Ship surface** | installable Python package `ThreeDimensionModeller`; console script `three-dimension-modeller`; module form `python -m ThreeDimensionModeller` |
-| **Product version SSOT** | `src/ThreeDimensionModeller/__init__.py` → `__version__` and `pyproject.toml` `[project].version` stay equal when either is bumped (current: **1.0.0**) |
+| **Product version SSOT** | `src/ThreeDimensionModeller/__init__.py` → `__version__` and `pyproject.toml` `[project].version` stay equal when either is bumped (current: **1.0.1**) |
 | **Install mode** | pip / local package. Not a shell online-install product |
 | **Type 1 elevation** | intentionally absent. No root or sudo product surface |
 | **Actor / role / subject / approver** | **Considered — no dest approver.** The human operator of `three-dimension-modeller` is the only actor. No dest approval machine. **None** is valid. Do not add an actor requirement file |
@@ -228,6 +228,7 @@ On Termux, Git Bash, Windows cmd, or the same class, ThreeDimensionModeller runs
 | 2026-10-04 | Active 1.1.2 | Residual row for the about page. Product version **1.0.5** |
 | 2026-10-05 | Active 1.1.3 | Pip floors point at `requirement-python-dependency-management`. Product version stays **1.0.0** |
 | 2026-10-05 | Active 1.1.4 | Git surface is `https://github.com/cloudgen/ThreeDimensionModeller`. Product version stays **1.0.0** |
+| 2026-10-05 | Active 1.1.5 | Product version **1.0.1** |
 
 ---
 

@@ -1,5 +1,5 @@
 **file**: docs/requirements/requirement-domain-threedimensionmodeller.md
-**Status**: Active (Version 1.0.0)
+**Status**: Active (Version 1.0.1)
 **Area**: domain
 **Key**: `requirement-domain-threedimensionmodeller`
 **Philosophy**: CIAO **v2.10.2** / CIAO-Lite (Caution • Intentional • Anti-fragile • Over-engineered / Over-protect)
@@ -142,7 +142,7 @@ The domain sentence on the about page is `Build a glTF model and an HTML viewer 
 | Field | Content |
 |-------|---------|
 | Product name | ThreeDimensionModeller |
-| Version | `__version__`, the same string as `pyproject.toml` (current `1.0.0`) |
+| Version | `__version__`, the same string as `pyproject.toml` (current `1.0.1`) |
 | Domain summary | Build a glTF model and an HTML viewer from outline images in a folder |
 
 The page **MUST** use that domain sentence. The runtime-tools line **MUST** be `none`. It **MUST NOT** name FFmpeg. numpy, OpenCV, and scikit-image are pip dependencies. They are not a host binary on that line.
@@ -160,7 +160,7 @@ The page **MUST** use that domain sentence. The runtime-tools line **MUST** be `
 | **Inputs** | `.webp` `.png` `.jpg` `.jpeg`, this folder only |
 | **Views** | `--views`, or `<folder>/views.json` when present, otherwise equal azimuth |
 | **Grid** | `--grid`, default 96, allowed 16 through 160 |
-| **VERSION** | `1.0.0` (`__init__.py` and `pyproject.toml`) |
+| **VERSION** | `1.0.1` (`__init__.py` and `pyproject.toml`) |
 | **Bootstrap parent** | OutlineImage. This product does not write outline images. It reads them |
 | **Absent** | verbs `hello`, `join`, `list-videos`, and `outline`, FFmpeg, rembg |
 | **CLI SSOT** | `requirement-python-cli-interface` |
@@ -225,3 +225,16 @@ On Termux, Git Bash, Windows cmd, or the same class, `model` and the menu run as
 | `requirement-python-packaging` | Manifest shape |
 | `requirement-runtime-prerequisites` | Those pip packages. No encoder |
 | `requirement-python-error-handling` | Missing folder, bad grid, one failed image |
+
+## 7. Status history
+
+| Date | Status | Note |
+|------|--------|------|
+| 2026-10-05 | Active 1.0.1 | Product version **1.0.1** |
+
+---
+
+**Last Updated**: 2026-10-05
+**Owner**: project maintainers
+**Alignment**: Registry `docs/requirements/index.md`; **CIAO** (https://github.com/cloudgen/ciao); CIAO-Lite (https://github.com/cloudgen/ciao-lite).
+

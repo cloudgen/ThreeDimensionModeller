@@ -2,17 +2,17 @@
 
 Authoritative specialized product law for **ThreeDimensionModeller** lives here.
 
-**Current state (2026-10-05):** Specialized **software-development** product. Left genesis. Registry is populated — see `index.md`. Fifteen Active requirements and one Retired encoder file. Product version is **1.0.0**.
+**Current state (2026-10-05):** Specialized **software-development** product. Left genesis. Registry is populated — see `index.md`. Fifteen Active requirements and one Retired encoder file. Product version is **1.0.1**.
 
 ## Product identity (summary)
 
 | Field | Value |
 |-------|--------|
 | Product / package | `ThreeDimensionModeller` |
-| Version SSOT | **`1.0.0`** (`pyproject.toml` + `src/ThreeDimensionModeller/__init__.py`) |
-| Product README SSOT | Root `README.md` (app-name, short description, target version **1.0.0**). Sections and pictures: `requirement-python-readme` |
+| Version SSOT | **`1.0.1`** (`pyproject.toml` + `src/ThreeDimensionModeller/__init__.py`) |
+| Product README SSOT | Root `README.md` (app-name, short description, target version **1.0.1**). Sections and pictures: `requirement-python-readme` |
 | Ship surface | Python package; console script **`three-dimension-modeller`**; module `python -m ThreeDimensionModeller`; checkout entry `./convert.py` |
-| Install mode | **pip / local package** (`pip install ThreeDimensionModeller`; this tree **1.0.0**; checkout `pip install -e .`) — not shell Type O |
+| Install mode | **pip / local package** (`pip install ThreeDimensionModeller`; this tree **1.0.1**; checkout `pip install -e .`) — not shell Type O |
 | Domain surface | `requirement-domain-threedimensionmodeller` — four pillars (`model`, the folder board, help, about) |
 | Text menu | `requirement-python-tui` — front rows model, system-log, language, self-management, Exit. Row 1 lists the current folder, each subfolder, and back. Default path word is `Path` |
 | Menu language | `requirement-python-cli-language` — row 4, thirteen codes, leaf `~/.local/ThreeDimensionModeller/language`. `language` is not an argv verb |

@@ -1,5 +1,5 @@
 **file**: docs/requirements/requirement-python-tui.md
-**Status**: Active (Version 1.2.3)
+**Status**: Active (Version 1.2.4)
 **Area**: python
 **Key**: `requirement-python-tui`
 **Philosophy**: CIAO **v2.10.2** / CIAO-Lite (Caution • Intentional • Anti-fragile • Over-engineered / Over-protect)
@@ -76,7 +76,7 @@ While the front board, the self-management board, the system-log board, or the l
 
 14. **Control-C is not row 9.** This file does not own Control-C. Row **9** Exit leaves with no confirm question and returns 0. A clock redraw **MUST NOT** leave the program.
 
-Picture of this board. The box in the picture is 16 columns wide so the corners stay visible. On a real screen those 16 columns become the full width, and the menu stays above the frame. The block in the picture is the focused caret. `14:05:09` is a sample local time. `1.0.0` is the current package version and moves with `__version__`. The explain on row 1 follows the menu language. This picture is English.
+Picture of this board. The box in the picture is 16 columns wide so the corners stay visible. On a real screen those 16 columns become the full width, and the menu stays above the frame. The block in the picture is the focused caret. `14:05:09` is a sample local time. `1.0.1` is the current package version and moves with `__version__`. The explain on row 1 follows the menu language. This picture is English.
 
 ```text
 Path: /tmp/clips                                              14:05:09
@@ -89,7 +89,7 @@ Path: /tmp/clips                                              14:05:09
 ╭──────────────╮
 │ > █          │
 ╰──────────────╯
-  ThreeDimensionModeller 1.0.0  │  main menu  │  Up/Down  •  Enter
+  ThreeDimensionModeller 1.0.1  │  main menu  │  Up/Down  •  Enter
 ```
 
 Folder board after row 1, when the current directory has subfolders `alpha` and `beta`:
@@ -287,6 +287,7 @@ On Termux, Git Bash, Windows cmd, or the same class, the person runs `three-dime
 | 2026-10-04 | Active 1.2.1 | Menu columns are display columns. Wide and Fullwidth count as two. Ambiguous stays one. `TP-TUI-10` has. `./tests/run.sh`: 6 tests, OK |
 | 2026-10-04 | Active 1.2.2 | Row 83 shows `requirement-python-about`. A long result page scrolls. Product version in the sample is **1.0.5** |
 | 2026-10-05 | Active 1.2.3 | A folder pick paints a page titled `working` with the domain waiting sentence before the conversion. Opening the folder board does not |
+| 2026-10-05 | Active 1.2.4 | The sample status line shows package **1.0.1** |
 
 ---
 
