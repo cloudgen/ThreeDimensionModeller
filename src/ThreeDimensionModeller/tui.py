@@ -95,7 +95,7 @@ class Tui:
             "With no folder, model uses the current directory.\n"
             "Menu row 1 model lists 1 current folder, each subfolder, and 0 back.\n"
             "The folder's outline images are written as model.glb and viewer.html\n"
-            "in that folder's output directory.\n"
+            "in that folder's model directory.\n"
             "version-check runs: python -m pip index versions {0}\n"
             "self-update runs: python -m pip install --upgrade {0}\n"
             "self-install runs: python -m pip install {0}\n"

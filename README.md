@@ -29,7 +29,7 @@ The sample conversion is [`sample-images/model/viewer.html`](https://cloudgen.gi
 
 ## Advantages
 
-1. **A folder of outlines in, one model out.** `three-dimension-modeller model` builds a model from outline images in the current directory and does not draw the menu. On the menu, row **1 model** asks for the current folder or a subfolder, then writes `model.glb` and `viewer.html`. With no arguments on a terminal, the text menu opens and waits. With no terminal and no verb, the program prints help and returns 0. There is no `--json`.
+1. **A folder of outlines in, one model out.** `three-dimension-modeller model` builds a model from outline images in the current directory and does not draw the menu. On the menu, row **1 model** asks for the current folder or a subfolder, then writes `model.glb` and `viewer.html` in that folder's `model` directory. With no arguments on a terminal, the text menu opens and waits. With no terminal and no verb, the program prints help and returns 0. There is no `--json`.
 2. **Built-in languages.** Row **4** lists thirteen languages: English, Simplified Chinese, Traditional Chinese, Spanish, Arabic, French, Portuguese, Russian, German, Japanese, Korean, Dutch, and Greek. The choice is saved for the next run. The note on row 1 follows the menu language.
 3. **Lifecycle and diagnostics.** `version-check`, `self-update`, `self-install`, and `self-uninstall` are menu rows **84**–**87** and typed verbs. `self-uninstall` on the command line needs `--force`. They call pip and do not use root. **system-log** (**3**) views a log, clears a log, and shows the log folder. **about** (**83**) stays in English.
 
@@ -158,12 +158,12 @@ python -m ThreeDimensionModeller
 
 On a terminal, that opens the main menu above. It does not build a model yet, and it does not call pip. With no terminal, the same command prints help and returns 0.
 
-**model** (1) opens a folder list: **1** current folder, then each subfolder, and **0** back. The chosen folder is built into `model.glb` and `viewer.html`. By default those files go in that folder's `output` directory. A `views.json` in the folder, or `--views`, names each outline with azimuth and elevation in degrees. `--grid` sets the voxel count on each axis (16 to 160, default 96). Any key on the result page returns to the main menu. The typed verb builds the model in the terminal and does not draw the menu:
+**model** (1) opens a folder list: **1** current folder, then each subfolder, and **0** back. The chosen folder is built into `model.glb` and `viewer.html`. By default those files go in that folder's `model` directory. A `views.json` in the folder, or `--views`, names each outline with azimuth and elevation in degrees. `--grid` sets the voxel count on each axis (16 to 160, default 96). Any key on the result page returns to the main menu. The typed verb builds the model in the terminal and does not draw the menu:
 
 ```bash
 three-dimension-modeller model
 three-dimension-modeller model photos --views views.json --grid 96
-three-dimension-modeller model --output photos/model
+three-dimension-modeller model --output photos/built
 ```
 
 ```bash
@@ -192,139 +192,115 @@ from ThreeDimensionModeller import main
 
 ## Screenshots
 
-Each heading is the file name. The paragraph is what that picture shows: the words on the screen, the characters in the input box, or the scene. Package **1.0.0**. Menu pictures captured earlier still show the previous product and, where the paragraph says so, **1.0.4**. Main-menu pictures and the join pictures were captured when row 1 was join. The current board is the fenced menu in Quick Installation: row 1 is **model**. `model-viewer.png` is the converted model in `sample-images/model/viewer.html`, and that picture links to the viewer. The package index can fetch a picture only after that file is on the public `main` branch. Every picture address is an absolute `https` URL.
+Each heading is the file name. The paragraph is what that picture shows: the words on the screen, the characters in the input box, or the scene. Package **1.0.0**. These pictures are captures of ThreeDimensionModeller. Row 1 is **model**. The folder board is `model-folder.png`. `model-viewer.png` is the converted model in `sample-images/model/viewer.html`, and that picture links to the viewer. The package index can fetch a picture only after that file is on the public `main` branch. Every picture address is an absolute `https` URL.
 
 ### `language-menu.png`
 
-Row **4** has opened the language list. **41 English** is highlighted, with the note "use English for this menu." The other rows are **42 简体中文**, **43 繁體中文**, **44 Español**, **45 العربية**, **46 Français**, **47 Português**, **48 Русский**, **49 Deutsch**, **50 日本語**, **51 한국어**, **52 Nederlands**, and **53 Ελληνικά**. Each note says to use that language for this menu. **0 Back** says "return to the main menu." The path label is `Path`. The clock is on the right of that row. The status line says `language`. VideoJoin 1.0.4.
+Row **4** has opened the language list. **41 English** is highlighted, with the note "use English for this menu." The other rows are **42 简体中文**, **43 繁體中文**, **44 Español**, **45 العربية**, **46 Français**, **47 Português**, **48 Русский**, **49 Deutsch**, **50 日本語**, **51 한국어**, **52 Nederlands**, and **53 Ελληνικά**. Each note says to use that language for this menu. **0 Back** says "return to the main menu." The path label is `Path`. The path is `/tmp/clips`. The clock is `17:48:52` on the right of that row. The input box shows `>` and no typed text. The status line says `ThreeDimensionModeller 1.0.0` and `language`.
 
 ![Language list, 41 English highlighted](https://raw.githubusercontent.com/cloudgen/ThreeDimensionModeller/main/screenshots/language-menu.png)
 
 ### `main-menu-en.png`
 
-English main menu. There is no saved-language line above the box. The path label is `Path`. The clock is on the right of that row. **1 join** is highlighted: "pick two videos in this folder and concatenate." Then **3 system-log** "view, clear, and the log folder," **4 language** "display language for this menu," **8 self-management** "version, about, and pip lifecycle," and **9 Exit** "leave." The status line says `main menu`.
+English main menu. There is no saved-language line above the box. The path label is `Path`. The path is `/tmp/clips`. The clock is `17:48:52` on the right of that row. **1 model** is highlighted: "build a 3D model from outline images in a chosen folder." Then **3 system-log** "view, clear, and the log folder," **4 language** "display language for this menu," **8 self-management** "version, about, and pip lifecycle," and **9 Exit** "leave." The input box shows `>` and no typed text. The status line says `ThreeDimensionModeller 1.0.0` and `main menu`.
 
 ![English main menu](https://raw.githubusercontent.com/cloudgen/ThreeDimensionModeller/main/screenshots/main-menu-en.png)
 
 ### `main-menu-zh-hans.png`
 
-Simplified Chinese main menu. The line above the box says `菜单语言是简体中文`. The path label is `路径`. The clock is on the right of that row. **1 join** is highlighted and stays `join`. **3** is `系统日志`, **4** is `语言`, **8** is `自我管理`, and **9** is `离开`. The status line says `主菜单`.
+Simplified Chinese main menu. The line above the box says `菜单语言是简体中文`. The path label is `路径`. The path is `/tmp/clips`. The clock is `17:48:52` on the right of that row. **1 model** is highlighted: "把所选文件夹中的轮廓图做成三维模型." **3** is `系统日志`, **4** is `语言`, **8** is `自我管理`, and **9** is `离开`. The input box shows `>` and no typed text. The status line says `ThreeDimensionModeller 1.0.0` and `主菜单`.
 
 ![Simplified Chinese main menu](https://raw.githubusercontent.com/cloudgen/ThreeDimensionModeller/main/screenshots/main-menu-zh-hans.png)
 
 ### `main-menu-zh-hant.png`
 
-Traditional Chinese main menu. The line above the box says `選單語言是繁體中文`. The path label is `路徑`. The clock is on the right of that row. **1 join** is highlighted and stays `join`. **3** is `系統日誌`, **4** is `語言`, **8** is `自我管理`, and **9** is `離開`. The status line says `主選單`.
+Traditional Chinese main menu. The line above the box says `選單語言是繁體中文`. The path label is `路徑`. The path is `/tmp/clips`. The clock is `17:48:52` on the right of that row. **1 model** is highlighted: "把所選資料夾中的輪廓圖做成三維模型." **3** is `系統日誌`, **4** is `語言`, **8** is `自我管理`, and **9** is `離開`. The input box shows `>` and no typed text. The status line says `ThreeDimensionModeller 1.0.0` and `主選單`.
 
 ![Traditional Chinese main menu](https://raw.githubusercontent.com/cloudgen/ThreeDimensionModeller/main/screenshots/main-menu-zh-hant.png)
 
 ### `main-menu-es.png`
 
-Spanish main menu. The line above the box says `El idioma del menú es español`. The path label is `Ruta`. The clock is on the right of that row. **1 join** is highlighted and stays `join`. **3** is `registro`, **4** is `idioma`, **8** is `autogestión`, and **9** is `Salir`. The status line says `menú principal`.
+Spanish main menu. The line above the box says `El idioma del menú es español`. The path label is `Ruta`. The path is `/tmp/clips`. The clock is `17:48:52` on the right of that row. **1 model** is highlighted: "construye un modelo 3D con los contornos de una carpeta elegida." **3** is `registro`, **4** is `idioma`, **8** is `autogestión`, and **9** is `Salir`. The input box shows `>` and no typed text. The status line says `ThreeDimensionModeller 1.0.0` and `menú principal`.
 
 ![Spanish main menu](https://raw.githubusercontent.com/cloudgen/ThreeDimensionModeller/main/screenshots/main-menu-es.png)
 
 ### `main-menu-ar.png`
 
-Arabic main menu. The line above the box says `لغة القائمة هي العربية`. The path label is `المسار`. The clock is on the right of that row. The numbers stay on the left. Arabic words on each row are shaped and read right to left. **1 join** is highlighted and stays `join`. **3** is `سجل النظام`, **4** is `لغة`, **8** is `إدارة ذاتية`, and **9** is `خروج`. The status line says `القائمة الرئيسية`.
+Arabic main menu. The line above the box says `لغة القائمة هي العربية`. The path label is `المسار`. The path is `/tmp/clips`. The clock is `17:48:52` on the right of that row. The numbers stay on the left. Arabic words on each row are shaped and read right to left. **1 model** is highlighted and stays `model`: "يبني نموذجا ثلاثي الأبعاد من حدود المجلد المختار." **3** is `سجل النظام`, **4** is `لغة`, **8** is `إدارة ذاتية`, and **9** is `خروج`. The input box shows `>` and no typed text. The status line says `ThreeDimensionModeller 1.0.0` and `القائمة الرئيسية`.
 
 ![Arabic main menu](https://raw.githubusercontent.com/cloudgen/ThreeDimensionModeller/main/screenshots/main-menu-ar.png)
 
 ### `main-menu-fr.png`
 
-French main menu. The line above the box says `La langue du menu est le français`. The path label is `Chemin`. The clock is on the right of that row. **1 join** is highlighted and stays `join`. **3** is `journal`, **4** is `langue`, **8** is `autogestion`, and **9** is `Quitter`. The status line says `menu principal`.
+French main menu. The line above the box says `La langue du menu est le français`. The path label is `Chemin`. The path is `/tmp/clips`. The clock is `17:48:52` on the right of that row. **1 model** is highlighted and stays `model`: "construit un modèle 3D à partir des contours d'un dossier choisi." **3** is `journal`, **4** is `langue`, **8** is `autogestion`, and **9** is `Quitter`. The input box shows `>` and no typed text. The status line says `ThreeDimensionModeller 1.0.0` and `menu principal`.
 
 ![French main menu](https://raw.githubusercontent.com/cloudgen/ThreeDimensionModeller/main/screenshots/main-menu-fr.png)
 
 ### `main-menu-pt.png`
 
-Portuguese main menu. The line above the box says `O idioma do menu é português`. The path label is `Caminho`. The clock is on the right of that row. **1 join** is highlighted and stays `join`. **3** is `registo`, **4** is `idioma`, **8** is `autogestão`, and **9** is `Sair`. The status line says `menu principal`.
+Portuguese main menu. The line above the box says `O idioma do menu é português`. The path label is `Caminho`. The path is `/tmp/clips`. The clock is `17:48:52` on the right of that row. **1 model** is highlighted and stays `model`: "constrói um modelo 3D a partir dos contornos de uma pasta escolhida." **3** is `registo`, **4** is `idioma`, **8** is `autogestão`, and **9** is `Sair`. The input box shows `>` and no typed text. The status line says `ThreeDimensionModeller 1.0.0` and `menu principal`.
 
 ![Portuguese main menu](https://raw.githubusercontent.com/cloudgen/ThreeDimensionModeller/main/screenshots/main-menu-pt.png)
 
 ### `main-menu-ru.png`
 
-Russian main menu. The line above the box says `Язык меню — русский`. The path label is `Путь`. The clock is on the right of that row. **1 join** is highlighted and stays `join`. **3** is `системный журнал`, **4** is `язык`, **8** is `самоуправление`, and **9** is `Выход`. The status line says `главное меню`.
+Russian main menu. The line above the box says `Язык меню — русский`. The path label is `Путь`. The path is `/tmp/clips`. The clock is `17:48:52` on the right of that row. **1 model** is highlighted and stays `model`: "собрать трёхмерную модель из контуров выбранной папки." **3** is `системный журнал`, **4** is `язык`, **8** is `самоуправление`, and **9** is `Выход`. The input box shows `>` and no typed text. The status line says `ThreeDimensionModeller 1.0.0` and `главное меню`.
 
 ![Russian main menu](https://raw.githubusercontent.com/cloudgen/ThreeDimensionModeller/main/screenshots/main-menu-ru.png)
 
 ### `main-menu-de.png`
 
-German main menu. The line above the box says `Die Menüsprache ist Deutsch`. The path label is `Pfad`. The clock is on the right of that row. **1 join** is highlighted and stays `join`. **3** is `Systemprotokoll`, **4** is `Sprache`, **8** is `Selbstverwaltung`, and **9** is `Beenden`. The status line says `Hauptmenü`.
+German main menu. The line above the box says `Die Menüsprache ist Deutsch`. The path label is `Pfad`. The path is `/tmp/clips`. The clock is `17:48:52` on the right of that row. **1 model** is highlighted and stays `model`: "aus Umrissen eines gewählten Ordners ein 3D-Modell bauen." **3** is `Systemprotokoll`, **4** is `Sprache`, **8** is `Selbstverwaltung`, and **9** is `Beenden`. The input box shows `>` and no typed text. The status line says `ThreeDimensionModeller 1.0.0` and `Hauptmenü`.
 
 ![German main menu](https://raw.githubusercontent.com/cloudgen/ThreeDimensionModeller/main/screenshots/main-menu-de.png)
 
 ### `main-menu-ja.png`
 
-Japanese main menu. The line above the box says `メニューの言語は日本語`. The path label is `パス`. The clock is on the right of that row. **1 join** is highlighted and stays `join`. **3** is `システムログ`, **4** is `言語`, **8** is `自己管理`, and **9** is `終了`. The status line says `メインメニュー`.
+Japanese main menu. The line above the box says `メニューの言語は日本語`. The path label is `パス`. The path is `/tmp/clips`. The clock is `17:48:52` on the right of that row. **1 model** is highlighted and stays `model`: "選んだフォルダの輪郭画像から3Dモデルを作る." **3** is `システムログ`, **4** is `言語`, **8** is `自己管理`, and **9** is `終了`. The input box shows `>` and no typed text. The status line says `ThreeDimensionModeller 1.0.0` and `メインメニュー`.
 
 ![Japanese main menu](https://raw.githubusercontent.com/cloudgen/ThreeDimensionModeller/main/screenshots/main-menu-ja.png)
 
 ### `main-menu-ko.png`
 
-Korean main menu. The line above the box says `메뉴 언어는 한국어`. The path label is `경로`. The clock is on the right of that row. **1 join** is highlighted and stays `join`. **3** is `시스템 로그`, **4** is `언어`, **8** is `자기관리`, and **9** is `종료`. The status line says `주 메뉴`.
+Korean main menu. The line above the box says `메뉴 언어는 한국어`. The path label is `경로`. The path is `/tmp/clips`. The clock is `17:48:52` on the right of that row. **1 model** is highlighted and stays `model`: "고른 폴더의 윤곽 이미지로 3D 모델을 만듭니다." **3** is `시스템 로그`, **4** is `언어`, **8** is `자기관리`, and **9** is `종료`. The input box shows `>` and no typed text. The status line says `ThreeDimensionModeller 1.0.0` and `주 메뉴`.
 
 ![Korean main menu](https://raw.githubusercontent.com/cloudgen/ThreeDimensionModeller/main/screenshots/main-menu-ko.png)
 
 ### `main-menu-nl.png`
 
-Dutch main menu. The line above the box says `De menutaal is Nederlands`. The path label is `Pad`. The clock is on the right of that row. **1 join** is highlighted and stays `join`. **3** is `systeemlog`, **4** is `taal`, **8** is `zelfbeheer`, and **9** is `Afsluiten`. The status line says `hoofdmenu`.
+Dutch main menu. The line above the box says `De menutaal is Nederlands`. The path label is `Pad`. The path is `/tmp/clips`. The clock is `17:48:52` on the right of that row. **1 model** is highlighted and stays `model`: "maak een 3D-model van contouren in een gekozen map." **3** is `systeemlog`, **4** is `taal`, **8** is `zelfbeheer`, and **9** is `Afsluiten`. The input box shows `>` and no typed text. The status line says `ThreeDimensionModeller 1.0.0` and `hoofdmenu`.
 
 ![Dutch main menu](https://raw.githubusercontent.com/cloudgen/ThreeDimensionModeller/main/screenshots/main-menu-nl.png)
 
 ### `main-menu-el.png`
 
-Greek main menu. The line above the box says `Η γλώσσα του μενού είναι ελληνικά`. The path label is `Διαδρομή`. The clock is on the right of that row. **1 join** is highlighted and stays `join`. **3** is `αρχείο καταγραφής`, **4** is `γλώσσα`, **8** is `αυτοδιαχείριση`, and **9** is `Έξοδος`. The status line says `κύριο μενού`.
+Greek main menu. The line above the box says `Η γλώσσα του μενού είναι ελληνικά`. The path label is `Διαδρομή`. The path is `/tmp/clips`. The clock is `17:48:52` on the right of that row. **1 model** is highlighted and stays `model`: "φτιάχνει ένα τρισδιάστατο μοντέλο από τα περιγράμματα ενός φακέλου." **3** is `αρχείο καταγραφής`, **4** is `γλώσσα`, **8** is `αυτοδιαχείριση`, and **9** is `Έξοδος`. The input box shows `>` and no typed text. The status line says `ThreeDimensionModeller 1.0.0` and `κύριο μενού`.
 
 ![Greek main menu](https://raw.githubusercontent.com/cloudgen/ThreeDimensionModeller/main/screenshots/main-menu-el.png)
 
-### `join-first.png`
+### `model-folder.png`
 
-Join, first question. The title is `VideoJoin (1.0.4) — join`. The page says "Join two videos in this folder." and "Esc returns to the menu." The list is `1. clip-a.mp4` and `2. clip-b.mp4`. The prompt is "Choose FIRST video →". The input box contains `1` and the block caret. The status line says `join`. There is no clock on this page.
+The folder board for row **1**. The path label is `Path`. The path is `/tmp/clips`. The clock is `17:48:52` on the right of that row. **1 current** is highlighted: "build a 3D model from outline images in this folder." **2 photos** says "build a 3D model from outline images in this subfolder." **0 Back** says "return to the main menu." The input box shows `>` and no typed text. The status line says `ThreeDimensionModeller 1.0.0` and `model`.
 
-![Choose the first video, 1 typed](https://raw.githubusercontent.com/cloudgen/ThreeDimensionModeller/main/screenshots/join-first.png)
-
-### `join-second.png`
-
-Join, second question. The title is `VideoJoin (1.0.4) — join`. The remaining list is `1. clip-b.mp4`. The prompt is "Choose SECOND video →". The input box contains `1` and the block caret. The status line says `join`.
-
-![Choose the second video, 1 typed for clip-b.mp4](https://raw.githubusercontent.com/cloudgen/ThreeDimensionModeller/main/screenshots/join-second.png)
-
-### `join-output.png`
-
-Join, output name. The page says "Joining:", then `clip-a.mp4`, then `+ clip-b.mp4`, then "Output filename [clip-a + clip-b.mp4]:". The input box is empty except for the block caret, so the bracketed default stands. The status line says `join`.
-
-![Output name, default clip-a + clip-b.mp4, box empty](https://raw.githubusercontent.com/cloudgen/ThreeDimensionModeller/main/screenshots/join-output.png)
-
-### `join-done.png`
-
-The join has finished by stream copy. The page says "Joining with perfect audio sync:", lists `clip-a.mp4` and `clip-b.mp4`, then "→ clip-a + clip-b.mp4", then "Staging dir → .", then "Running ffmpeg (stream copy – no quality loss)…", then "SUCCESS! Perfectly joined with original sound → clip-a + clip-b.mp4". The footer says "Press a key to return to the main menu." The input box is empty. The status line says `join`.
-
-![Stream-copy join of clip-a.mp4 and clip-b.mp4 succeeded](https://raw.githubusercontent.com/cloudgen/ThreeDimensionModeller/main/screenshots/join-done.png)
+![Folder board, current folder highlighted](https://raw.githubusercontent.com/cloudgen/ThreeDimensionModeller/main/screenshots/model-folder.png)
 
 ### `self-management.png`
 
-Row **8** has opened self-management. **82 version** is highlighted: "show the installed version." Then **83 about** "version, FFmpeg, and this computer", **84 version-check** "compare this install with pip", **85 self-update** "upgrade this package with pip", **86 self-uninstall** "remove this package with pip", **87 self-install** "install this package with pip", and **0 Back** "return to the main menu." The path label is `Path`. The path is `/tmp/clips`. The clock is `14:05:09` on the right of that row. The status line says `VideoJoin 1.0.5` and `self-management`.
+Row **8** has opened self-management. **82 version** is highlighted: "show the installed version." Then **83 about** "version and this computer", **84 version-check** "compare this install with pip", **85 self-update** "upgrade this package with pip", **86 self-uninstall** "remove this package with pip", **87 self-install** "install this package with pip", and **0 Back** "return to the main menu." The path label is `Path`. The path is `/tmp/clips`. The clock is `17:48:52` on the right of that row. The input box shows `>` and no typed text. The status line says `ThreeDimensionModeller 1.0.0` and `self-management`.
 
 ![Self-management, 82 version highlighted](https://raw.githubusercontent.com/cloudgen/ThreeDimensionModeller/main/screenshots/self-management.png)
 
 ### `tui-about.png`
 
-**about** (83) on the result page. The title is `VideoJoin (1.0.5) — result`. The page prints `VideoJoin 1.0.5`, `Domain: Concatenate two local videos with FFmpeg (copy, then fallback)`, `Runtime tools: FFmpeg (copy, then re-encode)`, and `Entry points: video-join, python -m VideoJoin`. The host check is stamped `2026-10-04 21:14:59.669782` and headed `[CHECK SYSTEM]:`. Visible lines include Python 3.12.11, C Library GCC 13.3.0, Ubuntu 24.04.5 LTS, amd64, the current user, the shell, the Python executable, python2 location, python3 location, conda location, pyenv location, `Inside docker container: False`, and `Cython String: cpython-312-x86_64-linux-gnu`. The footer says `Up/Down scrolls this page.` and `Press a key to return to the main menu.` There is no input box and no clock. The page stays in English.
+**about** (83) on the result page. The title is `ThreeDimensionModeller (1.0.0) — result`. The page prints `ThreeDimensionModeller 1.0.0`, `Domain: Build a glTF model and an HTML viewer from outline images in a folder`, `Runtime tools: none`, and `Entry points: three-dimension-modeller, python -m ThreeDimensionModeller`. The host check is stamped `2026-10-05 17:48:52.787448` and headed `[CHECK SYSTEM]:`. Visible lines include Python 3.12.11, C Library GCC 13.3.0, Ubuntu 24.04.5 LTS, amd64, the current user, the shell `/bin/bash`, the Python executable `python3`, python2 location, python3 location, an empty conda location, pyenv location, `Inside docker container: False`, and `Cython String: cpython-312-x86_64-linux-gnu`. The footer says `Up/Down scrolls this page.` and `Press a key to return to the main menu.` There is no input box and no clock. The page stays in English.
 
 ![About host check, English](https://raw.githubusercontent.com/cloudgen/ThreeDimensionModeller/main/screenshots/tui-about.png)
 
 ### `system-log.png`
 
-Row **3** has opened system-log. **31 view-log** is highlighted: "list a log file and show it." Then **32 clear-log** "empty one log file", **33 log-folder** "show the log folder", and **0 Back** "return to the main menu." The path label is `Path`. The clock is on the right of that row. The status line says `system-log`.
+Row **3** has opened system-log. **31 view-log** is highlighted: "list a log file and show it." Then **32 clear-log** "empty one log file", **33 log-folder** "show the log folder", and **0 Back** "return to the main menu." The path label is `Path`. The path is `/tmp/clips`. The clock is `17:48:52` on the right of that row. The input box shows `>` and no typed text. The status line says `ThreeDimensionModeller 1.0.0` and `system-log`.
 
 ![System log, 31 view-log highlighted](https://raw.githubusercontent.com/cloudgen/ThreeDimensionModeller/main/screenshots/system-log.png)
-
-### `video.png`
-
-A still picture, not a text-menu capture. A woman with long brown hair, in a grey shirt with a small blue mark, sits at a round wooden table and holds a white cup. An open book with a worn cover and a metal clasp lies on the table. Behind her are a beige sofa, a wide window onto trees, a potted plant, and a wooden floor in daylight.
-
-![Woman at a table with an open book and a cup](https://raw.githubusercontent.com/cloudgen/ThreeDimensionModeller/main/screenshots/video.png)
 
 ### `model-viewer.png`
 
@@ -349,7 +325,7 @@ three-dimension-modeller version
 three-dimension-modeller model --views views.json --grid 96
 ```
 
-That builds `output/model.glb` and `output/viewer.html` from outline images in the current directory and does not draw the menu. On a terminal, row **1** asks for the current folder or a subfolder, then does the same build. `./convert.py` is the same build from a checkout. A views file lists each outline basename with azimuth and elevation in degrees. Without one, the outlines are spaced evenly around the object at elevation 0.
+That builds `model/model.glb` and `model/viewer.html` from outline images in the current directory and does not draw the menu. On a terminal, row **1** asks for the current folder or a subfolder, then does the same build. `./convert.py` is the same build from a checkout. A views file lists each outline basename with azimuth and elevation in degrees. Without one, the outlines are spaced evenly around the object at elevation 0.
 
 ## Platform Compatibility
 
@@ -366,6 +342,8 @@ The text menu needs a terminal. With no terminal and no verb, the program prints
 
 - [ThreeDimensionModeller on GitHub](https://github.com/cloudgen/ThreeDimensionModeller) — this program’s source
 - [ThreeDimensionModeller on PyPI](https://pypi.org/project/ThreeDimensionModeller/) — this program on PyPI
+- [OutlineImage on GitHub](https://github.com/cloudgen/OutlineImage) — writes a detailed outline image for each picture in a folder, and this program reads those images
+- [OutlineImage on PyPI](https://pypi.org/project/OutlineImage/) — that program on PyPI
 - [AnimeDlp](https://github.com/Wilgat/AnimeDlp) — command-line downloader for anime video sites
 - [ChronicleLogger](https://github.com/Wilgat/ChronicleLogger) — status logger this program depends on (`ChronicleLogger>=1.3.1`)
 - [VideoSpeed](https://github.com/Wilgat/VideoSpeed) — cuts, changes speed, and boomerangs a clip. That program is not this one
@@ -386,4 +364,4 @@ MIT — see [`LICENSE.md`](./LICENSE.md). Also declared in `pyproject.toml`.
 
 ## Last Update
 
-2026-10-05 — **1.0.0** working tree: the package name is **ThreeDimensionModeller** and the console script is `three-dimension-modeller`. The public source is `https://github.com/cloudgen/ThreeDimensionModeller`. `model` builds `model.glb` and `viewer.html` from outline images in a folder. The default directory is that folder's `output`. Menu row 1 lists **1** current folder, each subfolder, and **0** back, then runs that build. `screenshots/model-viewer.png` is a capture of `sample-images/model/viewer.html`, and that picture links to the viewer. Picture addresses are absolute `https` URLs. Menu pictures captured earlier still show the previous product. Version badge matches `pyproject.toml` and `__version__`. `ChronicleLogger>=1.3.1`, `numpy>=2.3.0`, `opencv-python-headless>=5.0.0.93`, and `scikit-image>=0.25.0` are required.
+2026-10-05 — **1.0.0** working tree: the package name is **ThreeDimensionModeller** and the console script is `three-dimension-modeller`. The public source is `https://github.com/cloudgen/ThreeDimensionModeller`. `model` builds `model.glb` and `viewer.html` from outline images in a folder. The default directory is that folder's `model`. Menu row 1 lists **1** current folder, each subfolder, and **0** back, then runs that build. `screenshots/model-viewer.png` is a capture of `sample-images/model/viewer.html`, and that picture links to the viewer. Picture addresses are absolute `https` URLs. Menu pictures are captures of this product, including the folder board. Version badge matches `pyproject.toml` and `__version__`. `ChronicleLogger>=1.3.1`, `numpy>=2.3.0`, `opencv-python-headless>=5.0.0.93`, and `scikit-image>=0.25.0` are required.

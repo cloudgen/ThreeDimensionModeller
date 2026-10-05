@@ -156,7 +156,7 @@ class Cli:
                 "help prints this usage. version prints the installed version.\n"
                 "about prints a page. model reads one folder and does not\n"
                 "draw the menu. It writes model.glb and viewer.html in that\n"
-                "folder's output directory. Menu row 1 asks for the current\n"
+                "folder's model directory. Menu row 1 asks for the current\n"
                 "folder or a subfolder.\n"
                 "model with no folder uses the current directory.\n"
                 "version-check runs: python -m pip index versions {0}\n"
@@ -198,7 +198,7 @@ class Cli:
         parser.add_argument(
             "--output",
             default=None,
-            help="Directory for model.glb and viewer.html. Only on model.",
+            help="Directory for model.glb and viewer.html. Only on model. Default: <folder>/model.",
         )
         parser.add_argument(
             "--version",

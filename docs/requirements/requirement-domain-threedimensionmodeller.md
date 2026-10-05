@@ -41,8 +41,8 @@ This file remains the sole Active `requirement-domain-*`. Headings and pictures 
 
 | You do… | What it means | What you type |
 |---------|---------------|---------------|
-| Build from this folder | `model.glb` and `viewer.html` in `./output`. The menu does not open. The process does not prompt. | `three-dimension-modeller model` |
-| Build a named folder | The same, for that folder's own `output` directory. | `three-dimension-modeller model photos` |
+| Build from this folder | `model.glb` and `viewer.html` in `./model`. The menu does not open. The process does not prompt. | `three-dimension-modeller model` |
+| Build a named folder | The same, for that folder's own `model` directory. | `three-dimension-modeller model photos` |
 | Name the cameras | Use the angles in a views file. | `three-dimension-modeller model photos --views views.json` |
 | Pick from the menu | On a terminal, open the menu and choose **1**. Then **1** is the current folder, the next numbers are subfolders, and **0** returns. Before the build starts, the screen says that choice has been selected and that the work takes time. The result page shows the build lines. | `three-dimension-modeller`, then `1`, then a number |
 | Read about | You see ThreeDimensionModeller, the package version, and the domain sentence. | `three-dimension-modeller about` |
@@ -119,7 +119,7 @@ Menu row 1, kind `model`, short `model`, opens layer `folders`.
 | **2** … | the directory name | `pick:` plus that name | Build from that immediate child |
 | **0** | Back | `back` | Return to the front board. Nothing is built |
 
-Child rows are immediate directories whose names do not start with `.`, sorted by name ignoring case. `output` and `__pycache__` are listed when they exist. A hidden name is omitted. `.` as a child name, `..`, and a name that contains a separator are refused. Esc on this board returns to the front board.
+Child rows are immediate directories whose names do not start with `.`, sorted by name ignoring case. `model` and `__pycache__` are listed when they exist. A hidden name is omitted. `.` as a child name, `..`, and a name that contains a separator are refused. Esc on this board returns to the front board.
 
 The explain on row 1 and on each child follows the menu language. The short tokens `model` and `current`, and each directory name, stay as written. Opening this board does not show the waiting sentence. After a folder pick, and only when pillar A says a process is about to start, the screen shows that sentence before the build. The result page is the build lines. It does not show that waiting page a second time. There is no second question.
 
@@ -131,7 +131,7 @@ The help page **MUST** include:
 
 | Help row | Text intent |
 |----------|-------------|
-| Model | `model` builds one folder and does not draw the menu. With no folder, it uses the current directory. The files are `model.glb` and `viewer.html` in that folder's `output` directory |
+| Model | `model` builds one folder and does not draw the menu. With no folder, it uses the current directory. The files are `model.glb` and `viewer.html` in that folder's `model` directory |
 | Menu | On a terminal, `three-dimension-modeller` with no words shows the front board. Row 1 lists the current folder, each subfolder, and back |
 | Absence | This program does not join media and does not require FFmpeg |
 
@@ -156,7 +156,7 @@ The page **MUST** use that domain sentence. The runtime-tools line **MUST** be `
 | **Checkout entry** | `./convert.py` inserts `src` and calls `ThreeDimensionModeller.model.main` |
 | **Conversion** | `convert_folder` in `src/ThreeDimensionModeller/model.py` |
 | **Menu row** | Front row 1, kind `model`, short `model`. Folder board layer `folders` |
-| **Output** | `<folder>/output/model.glb` and `<folder>/output/viewer.html` by default |
+| **Output** | `<folder>/model/model.glb` and `<folder>/model/viewer.html` by default |
 | **Inputs** | `.webp` `.png` `.jpg` `.jpeg`, this folder only |
 | **Views** | `--views`, or `<folder>/views.json` when present, otherwise equal azimuth |
 | **Grid** | `--grid`, default 96, allowed 16 through 160 |
@@ -192,7 +192,7 @@ On Termux, Git Bash, Windows cmd, or the same class, `model` and the menu run as
 2. Add a shell installer or root elevation as silent domain behavior.
 3. Create a second Active `requirement-domain-*` without superseding this one.
 4. Make the typed verb prompt, or make empty argv start a build.
-5. Scan subfolders for images, or write the model somewhere other than `<folder>/output` unless the caller passed an output directory.
+5. Scan subfolders for images, or write the model somewhere other than `<folder>/model` unless the caller passed an output directory.
 6. Import the vision stack when the chosen folder has no supported image.
 7. Start a build without the waiting sentence in pillar A, show a download sentence, show the sentence for an empty folder, a missing folder, a rejected grid, a bad views file, or a failed output-directory create, or store the sentence in a module-level constant.
 
@@ -203,7 +203,7 @@ On Termux, Git Bash, Windows cmd, or the same class, `model` and the menu run as
 | ID | Criterion |
 |----|-----------|
 | AC-1 | `three-dimension-modeller model` builds from the current directory, does not draw the menu, and does not prompt |
-| AC-2 | The files are `model.glb` and `viewer.html` in `<folder>/output` unless `--output` is set |
+| AC-2 | The files are `model.glb` and `viewer.html` in `<folder>/model` unless `--output` is set |
 | AC-3 | Menu row 1 is `model`. The next board is **1** current folder, numbered subfolders, and **0** back |
 | AC-4 | `hello`, `join`, `list-videos`, and `outline` are unknown verbs |
 | AC-5 | An empty folder returns 0 and does not import the vision stack |

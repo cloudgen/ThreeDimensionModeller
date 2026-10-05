@@ -39,7 +39,7 @@ The text-menu picture is `requirement-python-tui`. Outline steps and formats are
 |---------|---------------|---------------|
 | Start on a terminal | The front board opens. Pip does not run. | `three-dimension-modeller` |
 | Start in a script | Help text, exit 0. | `three-dimension-modeller` |
-| Convert a folder | `model.glb` and `viewer.html` in that folder's `output` directory. No menu. | `three-dimension-modeller model` |
+| Convert a folder | `model.glb` and `viewer.html` in that folder's `model` directory. No menu. | `three-dimension-modeller model` |
 | Check or change the install | Pip runs only when you ask. Empty argv does not. | `three-dimension-modeller version-check` |
 
 ## 2. Core Rules (Mandatory)

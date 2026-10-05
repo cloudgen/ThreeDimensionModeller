@@ -137,7 +137,7 @@ key = screen.getch()
 | **System-log rows** | **31** `view-log`; **32** `clear-log`; **33** `log-folder`; **0** `Back`. These rows are not product verbs |
 | **Language rows** | **41**–**53** and **0** Back. Codes, the leaf, and the words are `requirement-python-cli-language` |
 | **Self-management rows** | **82** `version`; **83** `about`; **84** `version-check` (`python -m pip index versions ThreeDimensionModeller`); **85** `self-update` (`python -m pip install --upgrade ThreeDimensionModeller`); **86** `self-uninstall` (`python -m pip uninstall -y ThreeDimensionModeller`); **87** `self-install` (`python -m pip install ThreeDimensionModeller`); **0** `Back`. `help` is typed, not numbered. No row 81 |
-| **model** | Folder board: **1** current (`pick:.`), numbered immediate subfolders, **0** back. A pick paints the waiting page titled `working`, then converts that folder to `model.glb` and `viewer.html` in its `output` directory and shows the result page. Esc returns to the front board |
+| **model** | Folder board: **1** current (`pick:.`), numbered immediate subfolders, **0** back. A pick paints the waiting page titled `working`, then converts that folder to `model.glb` and `viewer.html` in its `model` directory and shows the result page. Esc returns to the front board |
 | **about** | Row **83**. Result page from `requirement-python-about`, composed by class `AboutPage`. The domain sentence stays on pillar D. Omits the frame. Does not name `py-tui`. Up and Down scroll when the page is longer than the screen |
 | **Box height** | 3 terminal rows, then one status row |
 | **Box width** | Full width the writer can place. Left border at column 0 |

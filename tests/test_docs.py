@@ -12,6 +12,8 @@ VIEWER_URL = "https://cloudgen.github.io/ThreeDimensionModeller/sample-images/mo
 RELATED = (
     "https://github.com/cloudgen/ThreeDimensionModeller",
     "https://pypi.org/project/ThreeDimensionModeller/",
+    "https://github.com/cloudgen/OutlineImage",
+    "https://pypi.org/project/OutlineImage/",
     "https://github.com/Wilgat/AnimeDlp",
     "https://github.com/Wilgat/ChronicleLogger",
     "https://github.com/Wilgat/VideoSpeed",
@@ -70,10 +72,11 @@ class TestReadmeStructure(unittest.TestCase):
         related = README.split("## Related Projects", 1)[1].split("## Contributing", 1)[0]
         urls = re.findall(r"\((https://[^)]+)\)", related)
         self.assertEqual(tuple(urls), RELATED)
-        video = README.split("### `video.png`", 1)[1]
-        if "\n### " in video:
-            video = video.split("\n### ", 1)[0]
-        self.assertIn("not a text-menu capture", video)
+        viewer = README.split("### `model-viewer.png`", 1)[1]
+        if "\n### " in viewer:
+            viewer = viewer.split("\n### ", 1)[0]
+        self.assertIn("not a text-menu capture", viewer)
+        self.assertNotIn("video.png", README)
 
 
 if __name__ == "__main__":

@@ -169,8 +169,8 @@ class TestModel(unittest.TestCase):
         self.assertTrue(text.startswith(
             "model has been selected. Building the 3D model takes time to finish."
         ))
-        glb = folder / "output" / "model.glb"
-        html = folder / "output" / "viewer.html"
+        glb = folder / "model" / "model.glb"
+        html = folder / "model" / "viewer.html"
         self.assertTrue(glb.is_file(), text)
         self.assertTrue(html.is_file(), text)
         self.assertTrue(glb.read_bytes().startswith(b"glTF"))

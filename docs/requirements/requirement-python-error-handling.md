@@ -67,7 +67,7 @@ Console sentences in this file stay required. Durable status, once the logger ex
 5. **MUST NOT** delete a source image as cleanup.
 6. **MUST NOT** delete `model.glb` as cleanup of a failed later step in the same run.
 7. A missing `ffmpeg` binary is not an error. Do not report it.
-8. The output directory is `<folder>/output` unless the caller passed another directory.
+8. The output directory is `<folder>/model` unless the caller passed another directory.
 
 ### 2.4 Logging and the console
 

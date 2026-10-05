@@ -8,18 +8,24 @@ Version SSOT: `pyproject.toml` + `src/ThreeDimensionModeller/__init__.py` `__ver
 ### Added
 
 - Package name is **ThreeDimensionModeller**. Console script is `three-dimension-modeller`. Version is **1.0.0**.
-- `model` builds `model.glb` and `viewer.html` from outline images in one folder. The default directory is that folder's `output`.
+- `model` builds `model.glb` and `viewer.html` from outline images in one folder. The default directory is that folder's `model`.
 - A views file names each outline with azimuth and elevation. Without one, outlines are spaced evenly in azimuth at elevation 0.
 - Menu row **1 model** lists **1** current folder, each subfolder, and **0** back, then runs that build.
 - `./convert.py` calls the same build.
 - Pip dependencies are `ChronicleLogger>=1.3.1`, `numpy>=2.3.0`, `opencv-python-headless>=5.0.0.93`, and `scikit-image>=0.25.0`.
 - Public source is `https://github.com/cloudgen/ThreeDimensionModeller`.
 - `screenshots/model-viewer.png` is a capture of `sample-images/model/viewer.html`. The picture in `README.md` links to `https://cloudgen.github.io/ThreeDimensionModeller/sample-images/model/viewer.html`. Picture addresses are absolute `https` URLs on `raw.githubusercontent.com` so the package index and GitHub both show them.
+- Menu pictures in `screenshots/` are captures of this product. `model-folder.png` is the folder board. The previous product's join pictures are not included.
 
 ### Changed
 
 - Specialized from the OutlineImage bootstrap. The outline-extraction verb is gone. Inputs are outline images.
 - Language leaf is `~/.local/ThreeDimensionModeller/language`. `THREEDIMENSIONMODELLER_LANG` overrides that file for one process and does not write it.
+- Related Projects names OutlineImage on GitHub (`https://github.com/cloudgen/OutlineImage`) and on PyPI (`https://pypi.org/project/OutlineImage/`).
+
+### Removed
+
+- `screenshots/video.png` and the description of that still in `README.md`. The picture is not part of this program.
 
 ## [Unreleased] — HelloTui bootstrap history
 

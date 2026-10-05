@@ -1,7 +1,7 @@
 # =============================================================================
 # Outline images to a glTF model and an HTML viewer.
 # requirement-domain-threedimensionmodeller — one folder in, model.glb and
-# viewer.html in output/. ./convert.py calls convert_folder. The text menu
+# viewer.html in model/. ./convert.py calls convert_folder. The text menu
 # and the model verb do too.
 # The vision stack loads only when this folder has a supported image.
 # A slow start shows its sentence before the work.
@@ -19,7 +19,7 @@ from pathlib import Path
 
 
 SUPPORTED_INPUT_EXTENSIONS = (".webp", ".png", ".jpg", ".jpeg")
-OUTPUT_DIR_NAME = "output"
+OUTPUT_DIR_NAME = "model"
 GLB_NAME = "model.glb"
 VIEWER_NAME = "viewer.html"
 DEFAULT_GRID = 96
@@ -790,7 +790,7 @@ def main(argv=None):
         "-o",
         dest="output",
         default=None,
-        help="Output folder (default: <folder>/output)",
+        help="Output folder (default: <folder>/model)",
     )
     parser.add_argument(
         "--views",
